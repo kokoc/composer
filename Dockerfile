@@ -18,7 +18,8 @@ RUN apk --no-cache add \
         php7-xml \
         php7-xmlreader \
         php7-xmlwriter \
-        php7-zlib
+        php7-zlib \
+        git
 
 RUN EXPECTED_CHECKSUM="$(wget -q -O - https://composer.github.io/installer.sig)" \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
